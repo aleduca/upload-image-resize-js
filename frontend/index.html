@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de upload com resize no node</title>
+</head>
+<body>
+  <h2>Curso de resize e upload no node</h2>
+
+  <div x-data="upload()">
+
+    <template x-if="message">
+      <span x-text="message"></span>
+    </template>
+
+    <img src="" x-ref="img">
+
+    <form>
+      <input type="file" id="file" @change="choose">
+      <template x-if="showButtonUpload">
+        <button @click.prevent="upload">Upload</button>
+      </template>
+    </form>
+  </div>
+
+  <script src="/src/dist/uploads.js"></script>
+</body>
+</html>
